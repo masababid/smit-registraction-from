@@ -1,167 +1,301 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
-  <body>
-    <header class="text-gray-400 bg-gray-900 body-font">
-  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-      <svg xmlns="://www.w3.org/200http0/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-      </svg>
-      <span class="ml-3 text-xl">Maaz Khan</span>
-    </a>
-    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-      <a class="mr-5 hover:text-white">HOME</a>
-      <a class="mr-5 hover:text-white">ABOUT ME</a>
-      <a class="mr-5 hover:text-white">CONTACT</a>
-      <a class="mr-5 hover:text-white">ADDRESS</a>
-    </nav>
-      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-        <path d="M5 12h14M12 5l7 7-7 7"></path>
-      </svg>
-    </button>
-  </div>
-</header>
-<section class="text-gray-400 bg-gray-900 body-font">
-  <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Before they sold out
-        <br class="hidden lg:inline-block">readymade gluten
-      </h1>
-      <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
-      <div class="flex justify-center">
-        <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-        <button class="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">Button</button>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saylani Registration Form</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Light gray background */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align to top to prevent form from centering when long */
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px; /* Add some padding for small screens */
+            box-sizing: border-box;
+        }
+        /* Custom focus style to match the image (green border) */
+        .input-field:focus,
+        .select-field:focus {
+            outline: none;
+            border-color: #34D399; /* Tailwind green-400 or a custom shade */
+            box-shadow: 0 0 0 1px #34D399;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-4xl">
+        <!-- Form Header -->
+        <div class="text-center mb-6">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">Saylani Registration</h1>
+            <p class="text-gray-600">Register for your desired program or event!</p>
+        </div>
+
+        <!-- Registration Form -->
+        <form class="space-y-6">
+            <!-- Grid for two-column layout on larger screens -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
+                <!-- Select Country -->
+                <div>
+                    <label for="country" class="block text-sm font-medium text-gray-700 mb-1">Select country</label>
+                    <select
+                        id="country"
+                        name="country"
+                        class="select-field mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm"
+                        required
+                    >
+                        <option value="">Select country</option>
+                        <option value="pakistan">Pakistan</option>
+                        <option value="usa">USA</option>
+                        <option value="uk">UK</option>
+                        <!-- Add more countries as needed -->
+                    </select>
+                </div>
+
+                <!-- Select City -->
+                <div>
+                    <label for="city" class="block text-sm font-medium text-gray-700 mb-1">Select city</label>
+                    <select
+                        id="city"
+                        name="city"
+                        class="select-field mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm"
+                        required
+                    >
+                        <option value="">Select city</option>
+                        <option value="karachi">Karachi</option>
+                        <option value="lahore">Lahore</option>
+                        <option value="islamabad">Islamabad</option>
+                        <!-- Add more cities as needed -->
+                    </select>
+                </div>
+
+                <!-- Select Course or Event -->
+                <div>
+                    <label for="courseEvent" class="block text-sm font-medium text-gray-700 mb-1">Select course or event</label>
+                    <select
+                        id="courseEvent"
+                        name="courseEvent"
+                        class="select-field mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm"
+                        required
+                    >
+                        <option value="">Select course or event</option>
+                        <option value="web-development">Web Development</option>
+                        <option value="graphic-design">Graphic Design</option>
+                        <option value="digital-marketing">Digital Marketing</option>
+                        <option value="data-science">Data Science</option>
+                    </select>
+                </div>
+
+                <!-- Select Computer Proficiency -->
+                <div>
+                    <label for="computerProficiency" class="block text-sm font-medium text-gray-700 mb-1">Select your computer proficiency</label>
+                    <select
+                        id="computerProficiency"
+                        name="computerProficiency"
+                        class="select-field mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm"
+                        required
+                    >
+                        <option value="">Select your computer proficiency</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+
+                <!-- Full Name -->
+                <div>
+                    <label for="fullName" class="block text-sm font-medium text-gray-700 mb-1">Full name</label>
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        placeholder="Full name"
+                        class="input-field mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm"
+                        required
+                    >
+                </div>
+
+                <!-- Father Name -->
+                <div>
+                    <label for="fatherName" class="block text-sm font-medium text-gray-700 mb-1">Father name</label>
+                    <input
+                        type="text"
+                        id="fatherName"
+                        name="fatherName"
+                        placeholder="Father name"
+                        class="input-field mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm"
+                        required
+                    >
+                </div>
+
+                <!-- Email -->
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Email"
+                        class="input-field mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm"
+                        required
+                    >
+                </div>
+
+                <!-- Phone -->
+                <div>
+                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Phone"
+                        class="input-field mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm"
+                        required
+                    >
+                </div>
+
+                <!-- CNIC -->
+                <div>
+                    <label for="cnic" class="block text-sm font-medium text-gray-700 mb-1">CNIC</label>
+                    <input
+                        type="text"
+                        id="cnic"
+                        name="cnic"
+                        placeholder="CNIC"
+                        class="input-field mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm"
+                        required
+                    >
+                </div>
+
+                <!-- Father's CNIC (optional) -->
+                <div>
+                    <label for="fatherCnic" class="block text-sm font-medium text-gray-700 mb-1">Father's CNIC (optional)</label>
+                    <input
+                        type="text"
+                        id="fatherCnic"
+                        name="fatherCnic"
+                        placeholder="Father's CNIC (optional)"
+                        class="input-field mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm"
+                    >
+                </div>
+
+                <!-- Date of Birth -->
+                <div>
+                    <label for="dob" class="block text-sm font-medium text-gray-700 mb-1">Date of birth</label>
+                    <div class="relative">
+                        <input
+                            type="date"
+                            id="dob"
+                            name="dob"
+                            placeholder="mm/dd/yyyy"
+                            class="input-field mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm pr-10"
+                            required
+                        >
+                        <!-- Calendar icon - using SVG for better control -->
+                        <span class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                            <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Select Gender -->
+                <div>
+                    <label for="gender" class="block text-sm font-medium text-gray-700 mb-1">Select gender</label>
+                    <select
+                        id="gender"
+                        name="gender"
+                        class="select-field mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm"
+                        required
+                    >
+                        <option value="">Select gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Address (full width) -->
+            <div>
+                <label for="address" class="block text-sm font-medium text-gray-700 mb-1">Address</label>
+                <textarea
+                    id="address"
+                    name="address"
+                    rows="3"
+                    placeholder="Address"
+                    class="input-field mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm"
+                    required
+                ></textarea>
+            </div>
+
+            <!-- Last Qualification (full width) -->
+            <div>
+                <label for="lastQualification" class="block text-sm font-medium text-gray-700 mb-1">Last qualification</label>
+                <select
+                    id="lastQualification"
+                    name="lastQualification"
+                    class="select-field mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm"
+                    required
+                >
+                    <option value="">Last qualification</option>
+                    <option value="matric">Matriculation</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="bachelor">Bachelor's</option>
+                    <option value="masters">Master's</option>
+                    <option value="phd">PhD</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <!-- Do you have a Laptop? (full width) -->
+            <div>
+                <label for="hasLaptop" class="block text-sm font-medium text-gray-700 mb-1">Do you have a Laptop?</label>
+                <select
+                    id="hasLaptop"
+                    name="hasLaptop"
+                    class="select-field mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm"
+                    required
+                >
+                    <option value="">Do you have a Laptop?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <!-- Picture Upload -->
+            <div>
+                <label for="picture" class="block text-sm font-medium text-gray-700 mb-1">Picture</label>
+                <input
+                    type="file"
+                    id="picture"
+                    name="picture"
+                    accept="image/*"
+                    class="block w-full text-sm text-gray-500
+                        file:mr-4 file:py-2 file:px-4
+                        file:rounded-md file:border-0
+                        file:text-sm file:font-semibold
+                        file:bg-green-50 file:text-green-700
+                        hover:file:bg-green-100"
+                >
+                <p class="mt-1 text-sm text-gray-500">With white or blue background</p>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="pt-4">
+                <button
+                    type="submit"
+                    class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-150 ease-in-out"
+                >
+                    Submit Registration
+                </button>
+            </div>
+        </form>
     </div>
-    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-      <img src="/IMG_0251.JPG" alt=""> 
-    </div>
-  </div>
-</section>
-<section class="text-gray-400 bg-gray-900 body-font">
-  <div class="container px-5 py-24 mx-auto">
-    <div class="flex flex-col text-center w-full mb-20">
-      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Master Cleanse Reliac Heirloom</h1>
-      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
-    </div>
-    <div class="flex flex-wrap -m-4 text-center">
-      <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
-        <div class="border-2 border-gray-800 px-4 py-6 rounded-lg">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-400 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
-            <path d="M8 17l4 4 4-4m-4-5v9"></path>
-            <path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"></path>
-          </svg>
-          <h2 class="title-font font-medium text-3xl text-white">2.7K</h2>
-          <p class="leading-relaxed">Downloads</p>
-        </div>
-      </div>
-      <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
-        <div class="border-2 border-gray-800 px-4 py-6 rounded-lg">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-400 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
-            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
-            <circle cx="9" cy="7" r="4"></circle>
-            <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
-          </svg>
-          <h2 class="title-font font-medium text-3xl text-white">1.3K</h2>
-          <p class="leading-relaxed">Users</p>
-        </div>
-      </div>
-      <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
-        <div class="border-2 border-gray-800 px-4 py-6 rounded-lg">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-400 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
-            <path d="M3 18v-6a9 9 0 0118 0v6"></path>
-            <path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"></path>
-          </svg>
-          <h2 class="title-font font-medium text-3xl text-white">74</h2>
-          <p class="leading-relaxed">Files</p>
-        </div>
-      </div>
-      <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
-        <div class="border-2 border-gray-800 px-4 py-6 rounded-lg">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-400 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-          </svg>
-          <h2 class="title-font font-medium text-3xl text-white">46</h2>
-          <p class="leading-relaxed">Places</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="text-gray-400 bg-gray-900 body-font">
-  <div class="container px-5 py-24 mx-auto">
-    <div class="flex flex-col text-center w-full mb-20">
-      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Master Cleanse Reliac Heirloom</h1>
-      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
-    </div>
-    <div class="flex flex-wrap -m-4">
-      <div class="lg:w-1/3 sm:w-1/2 p-4">
-        <div class="flex relative">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/600x360">
-          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">THE SUBTITLE</h2>
-            <h1 class="title-font text-lg font-medium text-white mb-3">Shooting Stars</h1>
-            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
-      </div>
-      <div class="lg:w-1/3 sm:w-1/2 p-4">
-        <div class="flex relative">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/601x361">
-          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">THE SUBTITLE</h2>
-            <h1 class="title-font text-lg font-medium text-white mb-3">The Catalyzer</h1>
-            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
-      </div>
-      <div class="lg:w-1/3 sm:w-1/2 p-4">
-        <div class="flex relative">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/603x363">
-          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">THE SUBTITLE</h2>
-            <h1 class="title-font text-lg font-medium text-white mb-3">The 400 Blows</h1>
-            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
-      </div>
-      <div class="lg:w-1/3 sm:w-1/2 p-4">
-        <div class="flex relative">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/602x362">
-          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">THE SUBTITLE</h2>
-            <h1 class="title-font text-lg font-medium text-white mb-3">Neptune</h1>
-            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
-      </div>
-      <div class="lg:w-1/3 sm:w-1/2 p-4">
-        <div class="flex relative">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/605x365">
-          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">THE SUBTITLE</h2>
-            <h1 class="title-font text-lg font-medium text-white mb-3">Holden Caulfield</h1>
-            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
-      </div>
-      <div class="lg:w-1/3 sm:w-1/2 p-4">
-        <div class="flex relative">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/606x366">
-          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">THE SUBTITLE</h2>
-            <h1 class="title-font text-lg font-medium text-white mb-3">Alper Kamu</h1>
-            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-  </body>
+</body>
 </html>
+
